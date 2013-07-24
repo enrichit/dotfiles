@@ -19,6 +19,9 @@ alias update="sudo apt-get update"
 alias upgrade="sudo apt-get update && sudo apt-get upgrade"
 alias exip="wget -qO- www.icanhazip.com"
 
+# Secret aliases
+source ~/.shhhhh.sh
+
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
 
