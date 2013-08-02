@@ -15,6 +15,7 @@ alias tmux="tmux -2"
 alias update="sudo apt-get update"
 alias upgrade="sudo apt-get update && sudo apt-get upgrade"
 alias exip="wget -qO- www.icanhazip.com"
+alias less="view -"
 
 # Secret aliases
 source ~/.shhhhh.sh
