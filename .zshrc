@@ -47,7 +47,7 @@ export PATH=/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/u
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
-[[ -z "$TMUX" ]] && exec tmux
+[[ -z "$TMUX" ]] && exec tmux -2
 
 # select ruby on login
 rvm use ruby-head
