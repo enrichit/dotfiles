@@ -27,7 +27,7 @@ set number
 set t_Co=256
 
 "-- Colour scheme
-colorscheme railscasts
+colorscheme xoria256
 
 "-- Show whitespace chars
 set listchars=tab:»\ ,trail:·,extends:>,precedes:<
@@ -81,3 +81,6 @@ imap jj <Esc>
 
 "-- Jump to perl module
 vmap <F2> y :new \| :e `pmpath <C-r>"`<CR>
+
+"-- Pathogen
+execute pathogen#infect()

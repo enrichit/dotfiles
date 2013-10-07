@@ -16,6 +16,8 @@ alias update="sudo apt-get update"
 alias upgrade="sudo apt-get update && sudo apt-get upgrade"
 alias exip="wget -qO- www.icanhazip.com"
 alias less="view -"
+alias bower="noglob bower"
+alias artisan="php artisan"
 
 # Secret aliases
 source ~/.shhhhh.sh
@@ -45,9 +47,16 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 export PATH=/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+# Load RVM into a shell session *as a function*
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+#
+ # This loads NVM
+[ -s $HOME/.nvm/nvm.sh ] && . $HOME/.nvm/nvm.sh
 
 [[ -z "$TMUX" ]] && exec tmux -2
 
 # select ruby on login
 rvm use ruby-head
+
+# select ruby on login
+nvm use 0.11
