@@ -97,10 +97,10 @@ nmap <leader>vs :vsplit<cr>
 nmap <leader>sp :split<cr>
 
 " Use ctrl-[hjkl] to select the active split!
-nmap <silent> <C-k> :wincmd k<CR>
-nmap <silent> <C-j> :wincmd j<CR>
-nmap <silent> <C-h> :wincmd h<CR>
-nmap <silent> <C-l> :wincmd l<CR>
+nmap <C-k> :wincmd k<CR>
+nmap <C-j> :wincmd j<CR>
+nmap <C-h> :wincmd h<CR>
+nmap <C-l> :wincmd l<CR>
 
 "-- Edit a todolist
 nmap ,todo :e TODO.md<cr>
