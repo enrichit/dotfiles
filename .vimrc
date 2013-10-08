@@ -106,10 +106,8 @@ set backupdir=~/.vim/backup//
 set directory=~/.vim/swap//
 
 "-- powerline
-let g:Powerline_symbols = 'fancy'
+let g:airline_powerline_fonts=1
 set laststatus=2
-set encoding=utf-8
-set noshowmode
 
 "-- mouse should work
 set mouse=a
