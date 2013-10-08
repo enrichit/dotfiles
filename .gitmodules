@@ -28,3 +28,12 @@
 [submodule ".vim/bundle/vim-bufferline"]
 	path = .vim/bundle/vim-bufferline
 	url = https://github.com/bling/vim-bufferline.git
+[submodule ".vim/bundle/vdebug"]
+	path = .vim/bundle/vdebug
+	url = git://github.com/joonty/vdebug.git
+[submodule ".vim/bundle/vim-markdown"]
+	path = .vim/bundle/vim-markdown
+	url = https://github.com/plasticboy/vim-markdown.git
+[submodule ".vim/bundle/vim-tmux-navigator"]
+	path = .vim/bundle/vim-tmux-navigator
+	url = https://github.com/christoomey/vim-tmux-navigator.git

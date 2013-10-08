@@ -13,6 +13,9 @@ set noexpandtab
 set cursorline
 set scrolloff=8
 
+"-- make sure syntax highlighing is on by default
+syntax on
+
 "-- Wildmenu
 set wildmenu
 set wildmode=list:longest
@@ -43,10 +46,6 @@ au BufWinEnter *.php,*.py let w:m2=matchadd('ErrorMsg', '\%>100v.\+', -1)
 
 "-- Remove trailing whitespaces from lines
 autocmd FileType php autocmd BufWritePre <buffer> :call setline(1,map(getline(1,"$"),'substitute(v:val,"\\s\\+$","","")'))
-
-"-- Press F5 to Clean Current Buffer 
-"-- (i.e., 2-spaces become tabs, end-line whitespace trimmed)
-nnoremap <silent> <F5> :let _s=@/<Bar>:%s/\s\+$//e<CR>:let @/=_s<Bar>:nohl<CR>
 
 "-- No eols
 autocmd BufWritePre *.php setlocal binary
@@ -80,6 +79,10 @@ noremap <C-m> :bp<CR>
 "-- quick escape
 imap jj <Esc>
 
+"-- remap commands so I don't have to use shift
+map ; :
+noremap ;; ;
+
 "-- Auto change to current directory
 nnoremap <leader>cd :cd %:p:h<CR>:pwd<CR>
 
@@ -90,13 +93,17 @@ nmap :ed :edit %:p:h/
 vmap <F2> y :new \| :e `pmpath <C-r>"`<CR>
 
 "-- vsplit rebindings
-nmap vs :vsplit<cr>
-nmap sp :split<cr>
+nmap <leader>vs :vsplit<cr>
+nmap <leader>sp :split<cr>
 
-nmap <C-h> <C-w>h
-nmap <C-j> <C-w>j
-nmap <C-k> <C-w>k
-nmap <C-l> <C-w>l
+" Use ctrl-[hjkl] to select the active split!
+nmap <silent> <C-k> :wincmd k<CR>
+nmap <silent> <C-j> :wincmd j<CR>
+nmap <silent> <C-h> :wincmd h<CR>
+nmap <silent> <C-l> :wincmd l<CR>
+
+"-- Edit a todolist
+nmap ,todo :e TODO.md<cr>
 
 "-- NERDTree
 nmap <C-b> :NERDTreeToggle<cr>
