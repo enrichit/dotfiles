@@ -9,6 +9,8 @@ ZSH_THEME="pygmalion"
 
 # Example aliases
 alias :q="exit"
+alias :e="vim"
+alias vi="vim"
 alias zshconfig="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
 alias tmux="tmux -2"
