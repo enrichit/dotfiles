@@ -22,6 +22,7 @@ alias bower="noglob bower"
 alias artisan="php artisan"
 alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
+alias sshkey="cat ~/.ssh/id_rsa.pub | pbcopy && echo 'SSH Key copied to clipboard.'";
 
 # Secret aliases
 source ~/.shhhhh.sh
