@@ -111,5 +111,8 @@ set laststatus=2
 set encoding=utf-8
 set noshowmode
 
+"-- mouse should work
+set mouse=a
+
 "-- Pathogen
 execute pathogen#infect()
