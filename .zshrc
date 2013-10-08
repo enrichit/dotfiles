@@ -20,6 +20,8 @@ alias exip="wget -qO- www.icanhazip.com"
 alias less="view -"
 alias bower="noglob bower"
 alias artisan="php artisan"
+alias pbcopy='xclip -selection clipboard'
+alias pbpaste='xclip -selection clipboard -o'
 
 # Secret aliases
 source ~/.shhhhh.sh
