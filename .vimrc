@@ -47,6 +47,10 @@ au BufWinEnter *.php,*.py let w:m2=matchadd('ErrorMsg', '\%>100v.\+', -1)
 "-- Remove trailing whitespaces from lines
 autocmd FileType php autocmd BufWritePre <buffer> :call setline(1,map(getline(1,"$"),'substitute(v:val,"\\s\\+$","","")'))
 
+"-- Better buffer behavior
+:nnoremap <Leader>q :Bdelete<CR>
+:nnoremap <Leader>qa :bufdo :Bdelete<CR>
+
 "-- No eols
 autocmd BufWritePre *.php setlocal binary
 autocmd BufWritePre *.php setlocal noeol
