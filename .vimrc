@@ -120,6 +120,16 @@ set directory=~/.vim/swap//
 let g:airline_powerline_fonts=1
 set laststatus=2
 
+"-- laravel
+nmap <leader>lr :e app/routes.php<cr>
+nmap <leader>lca :e app/config/app.php<cr>
+nmap <leader>lc :e composer.json<cr>
+
+nmap <leader>lagc !php artisan generate:controller
+nmap <leader>lagmo !php artisan generate:model
+nmap <leader>lagmi !php artisan generate:migration
+nmap <leader>lagf !php artisan generate:form
+
 "-- mouse should work
 set mouse=a
 
