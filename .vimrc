@@ -25,6 +25,7 @@ set hidden
 set history=1000
 set nowrap
 set number
+set relativenumber
 
 "-- Enable 256 colors
 set t_Co=256
@@ -35,10 +36,6 @@ colorscheme xoria256
 "-- Show whitespace chars
 set listchars=tab:»\ ,trail:·,extends:>,precedes:<
 set list
-
-"-- Set the leader character
-let mapleader = ","
-let g:mapleader = ","
 
 "-- Highlight long lines (soft limit: 80, hard limit: 100)
 au BufWinEnter *.php,*.py let w:m1=matchadd('Search', '\%<101v.\%>80v', -1)
@@ -82,10 +79,6 @@ noremap <C-m> :bp<CR>
 
 "-- quick escape
 imap jj <Esc>
-
-"-- remap commands so I don't have to use shift
-map ; :
-noremap ;; ;
 
 "-- Auto change to current directory
 nnoremap <leader>cd :cd %:p:h<CR>:pwd<CR>
