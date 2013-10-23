@@ -61,3 +61,15 @@
 [submodule ".vim/bundle/vim-json"]
 	path = .vim/bundle/vim-json
 	url = https://github.com/jakar/vim-json.git
+[submodule ".vim/bundle/vim-surround"]
+	path = .vim/bundle/vim-surround
+	url = https://github.com/tpope/vim-surround.git
+[submodule ".vim/bundle/vim-repeat"]
+	path = .vim/bundle/vim-repeat
+	url = https://github.com/tpope/vim-repeat.git
+[submodule ".vim/bundle/tabular"]
+	path = .vim/bundle/tabular
+	url = https://github.com/godlygeek/tabular.git
+[submodule ".vim/bundle/vim-html5"]
+	path = .vim/bundle/vim-html5
+	url = https://github.com/kaihendry/vim-html5.git

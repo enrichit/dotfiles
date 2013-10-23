@@ -56,11 +56,8 @@ autocmd BufWritePost *.php setlocal nobinary
 "-- Wild and CtrlP menu ignores
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
 set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
-set wildignore+=*/vendor/**
-set wildignore+=*/public/builds/**
-set wildignore+=*/public/components/**
 
-let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+let g:ctrlp_user_command = "find %s -type f | egrep -v '/\.(git|hg|svn)/' | egrep -v '\.(swp|swo|log|gitkep|keepme|so|o)$'"
 
 "-- CtrlP remapping
 map <C-p> :CtrlP<cr>

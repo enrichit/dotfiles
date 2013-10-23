@@ -50,7 +50,7 @@ plugins=(git git-flow svn)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
+export PATH=$PATH:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
 
 # Load RVM into a shell session *as a function*
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
@@ -58,10 +58,12 @@ export PATH=/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/u
  # This loads NVM
 [ -s $HOME/.nvm/nvm.sh ] && . $HOME/.nvm/nvm.sh
 
-[[ -z "$TMUX" ]] && exec tmux -2
+# [[ -z "$TMUX" ]] && exec tmux -2
 
 # select ruby on login
 rvm use ruby-head
 
 # select ruby on login
 nvm use 0.11
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
