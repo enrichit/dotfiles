@@ -22,7 +22,8 @@ alias bower="noglob bower"
 alias artisan="php artisan"
 alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
-alias sshkey="cat ~/.ssh/id_rsa.pub | pbcopy && echo 'SSH Key copied to clipboard.'";
+alias sshkey="cat ~/.ssh/id_rsa.pub | pbcopy && echo 'SSH Key copied to clipboard.'"
+alias please="sudo !!"
 
 # Secret aliases
 source ~/.shhhhh.sh
@@ -54,8 +55,8 @@ export PATH=$PATH:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/s
 
 # Load RVM into a shell session *as a function*
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-#
- # This loads NVM
+
+# This loads NVM
 [ -s $HOME/.nvm/nvm.sh ] && . $HOME/.nvm/nvm.sh
 
 # [[ -z "$TMUX" ]] && exec tmux -2
@@ -63,7 +64,7 @@ export PATH=$PATH:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/s
 # select ruby on login
 rvm use ruby-head
 
-# select ruby on login
-nvm use 0.11
+# select node on login
+nvm use 0.11.5
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting

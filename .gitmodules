@@ -73,3 +73,6 @@
 [submodule ".vim/bundle/vim-html5"]
 	path = .vim/bundle/vim-html5
 	url = https://github.com/kaihendry/vim-html5.git
+[submodule ".vim/bundle/vim-liquid"]
+	path = .vim/bundle/vim-liquid
+	url = https://github.com/tpope/vim-liquid.git
