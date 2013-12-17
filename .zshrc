@@ -59,12 +59,16 @@ export PATH=$PATH:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/s
 # This loads NVM
 [ -s $HOME/.nvm/nvm.sh ] && . $HOME/.nvm/nvm.sh
 
-# [[ -z "$TMUX" ]] && exec tmux -2
-
 # select ruby on login
-rvm use ruby-head
+if hash rvm 2>/dev/null; then
+else
+	rvm use ruby-head
+fi
 
 # select node on login
-nvm use 0.11.5
+if hash nvm 2>/dev/null; then
+else
+	nvm use 0.10
+fi
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
