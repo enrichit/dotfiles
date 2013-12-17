@@ -60,14 +60,12 @@ export PATH=$PATH:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/s
 [ -s $HOME/.nvm/nvm.sh ] && . $HOME/.nvm/nvm.sh
 
 # select ruby on login
-if hash rvm 2>/dev/null; then
-else
+if type rvm > /dev/null; then
 	rvm use ruby-head
 fi
 
 # select node on login
-if hash nvm 2>/dev/null; then
-else
+if type nvm > /dev/null; then
 	nvm use 0.10
 fi
 
