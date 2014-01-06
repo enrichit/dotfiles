@@ -76,3 +76,6 @@
 [submodule ".vim/bundle/vim-liquid"]
 	path = .vim/bundle/vim-liquid
 	url = https://github.com/tpope/vim-liquid.git
+[submodule "z"]
+	path = z
+	url = https://github.com/rupa/z.git
